@@ -37,7 +37,7 @@ class NotesController < ApplicationController
   end
 
   def notes
-    @_notes ||= user.notes
+    @_notes ||= user.notes.order(:id)
   end
 
   def note
